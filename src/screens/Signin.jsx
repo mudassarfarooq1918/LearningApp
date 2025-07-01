@@ -1,23 +1,22 @@
-import { StyleSheet, Text, View, TextInput } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Input from '../Components/Input' 
+import Input from '../Components/Input'
 import Button from '../Components/Button'
-const Login = ({navigation}) => {
+const Signin = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Login</Text>
+      <Text style={styles.text}>Signin</Text>
     <Input placeholder='Email' />
     <Input placeholder='Password' secureTextEntry />
-      <Button title='Login'  />
+      <Button title='Signin' onPress={() => navigation.navigate('Login')} />
     </View>
   )
 }
 
-export default Login
-
+export default Signin
 
 const styles = StyleSheet.create({
-    container: {
+     container: {
         flex: 1,
         justifyContent: 'center',
         // alignItems: 'center',
@@ -34,5 +33,4 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         // marginVertical: 50,
     },
-    
 })
